@@ -1,14 +1,14 @@
-import {
-  Box,
-  Text
-} from "@chakra-ui/react";
+// eslint-disable-next-line
+
+import { Box, Text } from "@chakra-ui/react";
 import "@fontsource/raleway/";
 import "@fontsource/ubuntu/";
 import ReactPannellum, { addScene } from "react-pannellum";
+import Dollhouse from "./Dollhouse"
 
 function App() {
   return (
-    <Box w="100%" h="auto" bgColor="gray.100" pb='9'>
+    <Box w="100%" h="auto" bgColor="gray.100" pb="9">
       <Box w="100%" h="4px" bgGradient="linear(to-br, #F09819, #FF512F)" />
       <Box
         w="100%"
@@ -26,7 +26,7 @@ function App() {
           fontSize="xl"
           fontWeight="bold"
         >
-          360°
+          Grahaspace Laboratory
         </Text>
       </Box>
       <Box
@@ -102,7 +102,7 @@ function App() {
         />
 
         {/* Bang Eja */}
-        <Box w='100%' my='5' />
+        <Box w="100%" my="5" />
         <ReactPannellum
           id="2"
           sceneId="firstScene"
@@ -154,6 +154,10 @@ function App() {
             );
           }}
         />
+        <br />
+        <Box w='100%' h='600px' cursor='grab' _active={{cursor: 'grabbing'}}>
+          <Dollhouse />
+        </Box>
       </Box>
     </Box>
   );
